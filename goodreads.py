@@ -18,9 +18,9 @@ def formatAuthor(raw_author):
 #        name = raw_author[:raw_author.find('(')].strip()
 #        book = raw_author[raw_author.find('('):].strip()
 #        author = f'{name}\n\n{book}'
-        name = raw_author[:raw_author.find(',')].strip()
+        name = raw_author[:raw_author.find(',')+1]
         book = raw_author[raw_author.find(',')+1:].strip()
-        author = f'{name} || {book}'
+        author = f'{name} {book}'
     except:
         author = raw_author
     finally:

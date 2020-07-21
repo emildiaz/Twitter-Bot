@@ -45,4 +45,4 @@ if __name__ == '__main__':
     #tweets once an hour
     while True:
         main()
-        time.sleep(3600)
+        time.sleep(7200)
