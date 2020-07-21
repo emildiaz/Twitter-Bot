@@ -35,7 +35,7 @@ def main():
         raw_author = raw_quote[raw_quote.rfind('—')+1:].strip()
         author = formatAuthor(raw_author)
         
-        q_and_a = f'{quote}\n{author}'
+        q_and_a = f'{quote}\n\n{author}'
 
         #check to see if fit in twitter character limit
         if len(q_and_a) <= 280:
