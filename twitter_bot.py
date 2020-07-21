@@ -3,6 +3,7 @@ import requests
 import random
 import time
 import goodreads
+from datetime import datetime
 
 consumer_key = 'JKJajqHdI4bKiih5xH16VBKal'
 consumer_secret = 'FD7UgwNlx4lCJTvLzmEjES4TsDAA5vTtsvQN3hpZoB7h9Ohsjt'
@@ -38,11 +39,9 @@ def main():
 
     print("Setting up tweet...")
     tweet(api, quote)
-    print("Tweeted!")
+    print(f"Tweeted! : {datetime.now}")
     
 
 if __name__ == '__main__':
     #tweets once an hour
-    while True:
-        main()
-        time.sleep(7200)
+    main()
