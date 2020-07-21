@@ -16,7 +16,7 @@ def formatAuthor(raw_author):
     try:
         name = raw_author[:raw_author.find('(')].strip()
         book = raw_author[raw_author.find('('):].strip()
-        author = f'{name} | {book}'
+        author = f'{name}\n\n{book}'
     except:
         author = raw_author
     finally:
@@ -35,7 +35,7 @@ def main():
         raw_author = raw_quote[raw_quote.rfind('—')+1:].strip()
         author = formatAuthor(raw_author)
         
-        q_and_a = f'{quote}\n\n{author}'
+        q_and_a = f'{quote}\n{author}'
 
         #check to see if fit in twitter character limit
         if len(q_and_a) <= 280:
