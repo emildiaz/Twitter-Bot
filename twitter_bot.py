@@ -39,7 +39,7 @@ def main():
 
     print("Setting up tweet...")
     tweet(api, quote)
-    print(f"Tweeted! : {datetime.now}")
+    print(f"Tweeted! : {datetime.now()}")
     
 
 if __name__ == '__main__':
